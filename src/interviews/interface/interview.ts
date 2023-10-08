@@ -8,7 +8,7 @@ export interface IGetManyInterview {
 
 export interface ICreateInterviewCardResult {
   statusCode: number;
-  newUser: Interview;
+  newInterview: Interview;
 }
 
 export interface ICreateCommentResult {

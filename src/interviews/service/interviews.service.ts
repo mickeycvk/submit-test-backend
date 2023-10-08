@@ -31,7 +31,7 @@ export class InterviewsService {
 
       return {
         statusCode: 201,
-        newUser: createdInterview,
+        newInterview: createdInterview,
       };
     } catch (error) {
       throw new BadRequestException('Failed to create an interview card', {
@@ -53,6 +53,7 @@ export class InterviewsService {
 
       queryBuilder
         .select([
+          'interview.interview_id',
           'interview.detail',
           'interview.interview_status',
           'interview.created_at',
